@@ -2,7 +2,7 @@
   "name": "show-theme-variables",
   "displayName": "Show Theme Variables",
   "description": "Convenient for developers to show theme variables inline",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "publisher": "Binbiubiubiu",
   "engines": {
     "vscode": "^1.80.0"
