@@ -57,7 +57,7 @@
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
     "deploy": "vsce publish --yarn",
-    "release": "np --no-publish --yolo"
+    "release": "npm run compile && np --no-publish --yolo --yarn"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
