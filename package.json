@@ -3,6 +3,7 @@
   "displayName": "Show Theme Variables",
   "description": "Convenient for developers to show theme variables inline",
   "version": "0.0.1",
+  "icon": "./icon.png",
   "publisher": "Binbiubiubiu",
   "engines": {
     "vscode": "^1.80.0"
