@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import { parse as lessParse } from "postcss-less";
 import { parse as vueParse } from "@vue/compiler-sfc";
-import { VariableCompletionItem, loadThemeVariables } from "./completionItemProvider";
+import { VariableCompletionItem, loadThemeVariables } from "./loadThemeVariables";
 
 export interface VarablesMatch {
   range: vscode.Range;
@@ -51,13 +51,10 @@ function findTextInVue(code: string) {
   return matches;
 }
 
-let variableMap: Map<string, VariableCompletionItem>;
-export function findVariables(code: string, fileName: string) {
-  const variables = loadThemeVariables();
-  variableMap = new Map();
-  variables.forEach((v) => {
-    variableMap.set(v.label, v);
-  });
+export let variableMap: Map<string, VariableCompletionItem>;
+export async function findVariables(code: string, fileName: string) {
+  variableMap = await loadThemeVariables();
+
 
   if (fileName.endsWith(".vue")) {
     return findTextInVue(code);

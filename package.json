@@ -2,12 +2,13 @@
   "name": "show-theme-variables",
   "displayName": "Show Theme Variables",
   "description": "Convenient for developers to show theme variables inline",
-  "version": "0.0.1",
+  "version": "0.0.0",
+  "publisher": "Binbiubiubiu",
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
-    "Other"
+    "Programming Languages"
   ],
   "activationEvents": [
     "onLanguage:css",
@@ -21,7 +22,6 @@
       "type": "object",
       "title": "Pick Theme Variables",
       "properties": {
-
         "show-theme-variables.themeFilePath": {
           "scope": "resource",
           "type": "array",
@@ -36,7 +36,7 @@
     "commands": [
       {
         "command": "pick-theme-colors.addThemeVariablesFile",
-        "title": "添加主题变量文件"
+        "title": "add theme variable file"
       }
     ],
     "menus": {
@@ -55,7 +55,9 @@
     "watch": "tsc -watch -p ./",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "deploy": "vsce publish --yarn",
+    "release": "np --no-publish --yolo"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
@@ -63,22 +65,43 @@
     "@types/less": "^3.0.3",
     "@types/mocha": "^10.0.1",
     "@types/node": "20.2.5",
+    "@types/postcss-import": "^14.0.0",
     "@types/postcss-less": "^4.0.2",
+    "@types/resolve": "^1.20.2",
     "@types/vscode": "^1.80.0",
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
     "@vscode/test-electron": "^2.3.2",
+    "@vscode/vsce": "^2.19.0",
     "eslint": "^8.41.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
+    "np": "^8.0.4",
     "typescript": "^5.1.3"
   },
   "dependencies": {
     "@vue/compiler-sfc": "^3.3.4",
-    "fs-extra": "^11.1.1",
     "is-color-stop": "^1.1.0",
     "less": "^4.1.3",
     "postcss": "^8.4.25",
-    "postcss-less": "^6.0.0"
-  }
+    "postcss-import": "^15.1.0",
+    "postcss-less": "^6.0.0",
+    "postcss-scss": "^4.0.6",
+    "resolve": "^1.22.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Binbiubiubiu/show-theme-variables.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Binbiubiubiu/show-theme-variables/issues"
+  },
+  "keywords": [
+    "theme variable",
+    "less",
+    "scss",
+    "css"
+  ],
+  "author": "Binbiubiubiu <2632003786@qq.com>",
+  "license": "MIT"
 }
