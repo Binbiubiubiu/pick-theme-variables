@@ -3,7 +3,7 @@
   "displayName": "Show Theme Variables",
   "description": "Convenient for developers to show theme variables inline",
   "version": "0.0.1",
-  "icon": "./icon.png",
+  "icon": "icon.png",
   "publisher": "Binbiubiubiu",
   "engines": {
     "vscode": "^1.80.0"
@@ -58,7 +58,7 @@
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
     "deploy": "vsce publish --yarn",
-    "release": "npm run compile && np --no-publish --yolo --yarn"
+    "release": "np --no-publish --yolo --yarn"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",

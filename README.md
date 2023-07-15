@@ -1,6 +1,4 @@
-# show-theme-colors README
-
-This is the README for your extension "pick-theme-colors". After writing up a brief description, we recommend including the following sections.
+# show-theme-colors
 
 ## Features
 
